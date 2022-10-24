@@ -633,7 +633,7 @@
                                                                                                                     pep = "Pep 21X-26-C";
           
             console.log(cuentaEnviar);                                                                               }
-            cuenta = cuentaEnviar.slice(13, -1);
+            cuenta = cuentaEnviar.slice(13, 0);
     db.ref("moneda").update({
         pepActual: pep,
         cuentaActual: cuenta,

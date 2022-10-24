@@ -290,28 +290,28 @@ font-size: 16px;"> <a href="panelGastos.html" class="btn btn-dange square-btn-ad
                     </div>
                 </div>
                  <!-- /. ROW  -->
-                 <hr />
-                 <div class="panel-body col-sm-3 col-xs-3">
-                    <select class="form-control " id="pActual" onchange="asignarProyecto();" type="text" >
+                 <!--hr / ALEXIS--> 
+           <div class="panel-body col-sm-3 col-xs-3">
+                    <select class="form-control " id="pActual" onchange="asignarProyecto();" type="text" class="btn tm-btn-submit ml-auto">
                                    
                        <option value="" >Seleccione un proyecto</option>
                
                    </select>
-               </div>
-               <div class="panel-body col-sm-3 col-xs-3">
+           </div>
+           <!--div class="panel-body col-sm-3 col-xs-3">
                 <select name="pepEnviar2" class="form-control " id="pepEnviar2"  onchange="cargarCuentas2();" type="text" required>
                                
                    <option value="" >Seleccione un pep</option>
            
                </select>
-           </div>
-           <div class="panel-body col-sm-3 col-xs-3">
-            <select  name="cuentaEnviar2" class="form-control " id="cuentaEnviar2" onchange="asignarCuenta();" type="text" required>
-                           
-               <option value="" >Seleccione una cuenta</option>
-       
-           </select>
-       </div>
+           </div-->
+           <!--div class="panel-body col-sm-3 col-xs-3">
+                <select  name="cuentaEnviar2" class="form-control " id="cuentaEnviar2" onchange="asignarCuenta();" type="text" class="btn tm-btn-submit ml-auto" required>
+                            
+                <option value="" >Seleccione una cuenta</option>
+        
+                </select>
+            </div-->
             <div class="row">
                 <div class="col-md-12">
                     <!-- Advanced Tables -->
@@ -399,7 +399,8 @@ font-size: 16px;"> <a href="panelGastos.html" class="btn btn-dange square-btn-ad
   <script src="assets/js/custom.js"></script>
     <script src="assets/js/pruebagasto.js"></script>
     <script>
-        function asignarProyecto() {
+
+function asignarProyecto() {
 
 db.ref("moneda").update({
     pActual: $.trim($('#pActual').val()),
@@ -417,96 +418,96 @@ pepActual: $.trim($('#pepEnviar2').val()),
 location.reload();
 }
 
-    function asignarCuenta() {
-        let pep = $.trim($('#pepEnviar2').val());
-        let cuentaEnviar = $.trim($('#cuentaEnviar2').val());
-        if (pep == "pep01") {
-                pep = "Pep 21X-01-C";
+function asignarCuenta() {
+    let pep = $.trim($('#pepEnviar2').val());
+    let cuentaEnviar = $.trim($('#cuentaEnviar2').val());
+    if (pep == "pep01") {
+            pep = "Pep 21X-01-C";
+        } else
+            if (pep == "pep02") {
+                pep = "Pep 21X-02-C";
             } else
-                if (pep == "pep02") {
-                    pep = "Pep 21X-02-C";
+                if (pep == "pep03") {
+                    pep = "Pep 21X-03-C";
                 } else
-                    if (pep == "pep03") {
-                        pep = "Pep 21X-03-C";
+                    if (pep == "pep04") {
+                        pep = "Pep 21X-04-C";
                     } else
-                        if (pep == "pep04") {
-                            pep = "Pep 21X-04-C";
+                        if (pep == "pep05") {
+                            pep = "Pep 21X-05-C";
                         } else
-                            if (pep == "pep05") {
-                                pep = "Pep 21X-05-C";
+                            if (pep == "pep06") {
+                                pep = "Pep 21X-06-C";
                             } else
-                                if (pep == "pep06") {
-                                    pep = "Pep 21X-06-C";
+                                if (pep == "pep07") {
+                                    pep = "Pep 21X-07-C";
                                 } else
-                                    if (pep == "pep07") {
-                                        pep = "Pep 21X-07-C";
+                                    if (pep == "pep08") {
+                                        pep = "Pep 21X-08-C";
                                     } else
-                                        if (pep == "pep08") {
-                                            pep = "Pep 21X-08-C";
+                                        if (pep == "pep09") {
+                                            pep = "Pep 21X-09-C";
                                         } else
-                                            if (pep == "pep09") {
-                                                pep = "Pep 21X-09-C";
+                                            if (pep == "pep10") {
+                                                pep = "Pep 21X-10-C";
                                             } else
-                                                if (pep == "pep10") {
-                                                    pep = "Pep 21X-10-C";
+                                                if (pep == "pep11") {
+                                                    pep = "Pep 21X-11-C";
                                                 } else
-                                                    if (pep == "pep11") {
-                                                        pep = "Pep 21X-11-C";
+                                                    if (pep == "pep12") {
+                                                        pep = "Pep 21X-12-C";
                                                     } else
-                                                        if (pep == "pep12") {
-                                                            pep = "Pep 21X-12-C";
+                                                        if (pep == "pep13") {
+                                                            pep = "Pep 21X-13-C";
                                                         } else
-                                                            if (pep == "pep13") {
-                                                                pep = "Pep 21X-13-C";
+                                                            if (pep == "pep14") {
+                                                                pep = "Pep 21X-14-C";
                                                             } else
-                                                                if (pep == "pep14") {
-                                                                    pep = "Pep 21X-14-C";
+                                                                if (pep == "pep15") {
+                                                                    pep = "Pep 21X-15-C";
                                                                 } else
-                                                                    if (pep == "pep15") {
-                                                                        pep = "Pep 21X-15-C";
+                                                                    if (pep == "pep16") {
+                                                                        pep = "Pep 21X-16-C";
                                                                     } else
-                                                                        if (pep == "pep16") {
-                                                                            pep = "Pep 21X-16-C";
+                                                                        if (pep == "pep17") {
+                                                                            pep = "Pep 21X-17-C";
                                                                         } else
-                                                                            if (pep == "pep17") {
-                                                                                pep = "Pep 21X-17-C";
+                                                                            if (pep == "pep18") {
+                                                                                pep = "Pep 21X-18-C";
                                                                             } else
-                                                                                if (pep == "pep18") {
-                                                                                    pep = "Pep 21X-18-C";
+                                                                                if (pep == "pep19") {
+                                                                                    pep = "Pep 21X-19-C";
                                                                                 } else
-                                                                                    if (pep == "pep19") {
-                                                                                        pep = "Pep 21X-19-C";
+                                                                                    if (pep == "pep20") {
+                                                                                        pep = "Pep 21X-20-C";
                                                                                     } else
-                                                                                        if (pep == "pep20") {
-                                                                                            pep = "Pep 21X-20-C";
+                                                                                        if (pep == "pep21") {
+                                                                                            pep = "Pep 21X-21-C";
                                                                                         } else
-                                                                                            if (pep == "pep21") {
-                                                                                                pep = "Pep 21X-21-C";
+                                                                                            if (pep == "pep22") {
+                                                                                                pep = "Pep 21X-2-C";
                                                                                             } else
-                                                                                                if (pep == "pep22") {
-                                                                                                    pep = "Pep 21X-2-C";
+                                                                                                if (pep == "pep23") {
+                                                                                                    pep = "Pep 21X-23-C";
                                                                                                 } else
-                                                                                                    if (pep == "pep23") {
-                                                                                                        pep = "Pep 21X-23-C";
+                                                                                                    if (pep == "pep24") {
+                                                                                                        pep = "Pep 21X-24-C";
                                                                                                     } else
-                                                                                                        if (pep == "pep24") {
-                                                                                                            pep = "Pep 21X-24-C";
+                                                                                                        if (pep == "pep25") {
+                                                                                                            pep = "Pep 21X-25-C";
                                                                                                         } else
-                                                                                                            if (pep == "pep25") {
-                                                                                                                pep = "Pep 21X-25-C";
-                                                                                                            } else
-                                                                                                                if (pep == "pep26") {
-                                                                                                                    pep = "Pep 21X-26-C";
-          
-            console.log(cuentaEnviar);                                                                               }
-            cuenta = cuentaEnviar.slice(13, -1);
-    db.ref("moneda").update({
-        pepActual: pep,
-        cuentaActual: cuenta,
-    
-    });
-    location.reload();
-    }
-    </script>
+                                                                                                            if (pep == "pep26") {
+                                                                                                                pep = "Pep 21X-26-C";
+      
+        console.log(cuentaEnviar);                                                                               }
+        cuenta = cuentaEnviar.slice(13, -1);
+db.ref("moneda").update({
+    pepActual: pep,
+    cuentaActual: cuenta,
+
+});
+location.reload();
+}
+</script>
 </body>
 </html>
